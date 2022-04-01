@@ -1,0 +1,16 @@
+body {
+    font-family: "Inter", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    box-sizing: border-box;
+    color: #1E2533;
+}
+.container {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.bg-pink {
+    background: url(../design/bg-promo.png) no-repeat center;
+    background-size: cover;
+}
+
+// !решить вопрос с фоном
