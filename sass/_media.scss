@@ -4,3 +4,18 @@
         @content;
     }
 }
+@mixin sm-landscape-up () {
+    @media screen and (min-width: 900px) {
+        @content;
+    }
+}
+@mixin md-landscape-up () {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}
+@mixin lg-landscape-up () {
+    @media screen and (min-width: 1400px) {
+        @content;
+    }
+}

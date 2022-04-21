@@ -2,6 +2,12 @@
     padding-top: 23px;
     display: flex;
     padding-bottom: 16px;
+    @include tablet-portrait-up {
+        align-items: center;
+    }
+    @include lg-landscape-up {
+        justify-content: space-between;
+    }
 }
 .logo {
     background: url(../design/main-logo.svg) no-repeat center;
@@ -9,6 +15,9 @@
     height: 50px;
     display: inline-block;
     margin-right: auto;
+    @include md-landscape-up {
+        margin-right: 54px;
+    }
 }
 .label-burger {
     background: #FFFFFF;
@@ -45,7 +54,7 @@
 .input-burger {
     display: none;
     &:checked ~ .nav {
-        transform: translateX(170px);
+        transform: translateX(200px);
     }
     &:checked ~ .label-burger > .line-burger {
         transform: rotate(46deg);
@@ -67,26 +76,56 @@
     @include tablet-portrait-up {
         position: static;
         transform: translateX(0);
+        display: flex;
+        align-items: center;
     }
     &__ul {
         list-style: none;
         margin: 0;
         padding: 0;
         text-align: left;
+        @include tablet-portrait-up {
+            display: flex;
+        }
     }
     &__li {
-        margin-bottom: 15px;
+        margin-bottom: 9px;
+        @include tablet-portrait-up {
+            margin-bottom: 0;
+            margin-right: 18px;
+        }
+        @include md-landscape-up {
+            margin-right: 49px;
+        }
+        @include lg-landscape-up {
+            &:last-child {
+                margin-right: 117px;
+            }
+        }
     }
     &-link {
-        font-weight: 700;
-        font-size: 15px;
-        line-height: 18px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
         color: #1E2533;
         text-decoration: none;
+        @include sm-landscape-up {
+            font-size: 16px;
+            line-height: 19px;
+        }
+        
     }
 }
 .social-link {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    @include tablet-portrait-up {
+        margin-bottom: 0;
+        margin-right: 15px;
+    }
+    @include md-landscape-up {
+        margin-right: 75px;
+
+    }
     &__icon {
         box-shadow: 0px 2px 0px #91665E;
         border-radius: 40px;
@@ -104,6 +143,10 @@
 }
 .log-in {
     margin-right: 8px;
+    @include sm-landscape-up {
+        display: flex;
+        align-items: center;
+    }
     &__icon {
         width: 40px;
         height: 40px;  
@@ -126,6 +169,10 @@
         line-height: 19px;
         color: #1E2533;
         display: none;
+        @include sm-landscape-up {
+            display: block;
+            margin: 0 16px 0 10px;
+        }
     }
     &__select {
         font-weight: 400;
@@ -134,5 +181,8 @@
         color: #232937;
         opacity: 0.8;
         display: none;
+        @include sm-landscape-up {
+            display: block;
+        }
     }
 }
