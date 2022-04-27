@@ -9,8 +9,10 @@ body {
     padding: 0 15px;
 }
 .bg-pink {
-    background: url(../design/bg-promo.png) no-repeat center;
-    background-size: cover;
+    background: url(../design/bg-promo.png) no-repeat center top;
+    background-size: 250%;
+    @include tablet-portrait-up {
+        background-size: 170%;
+    }
 }
 
-// !решить вопрос с фоном
